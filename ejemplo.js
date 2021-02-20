@@ -1,12 +1,11 @@
+
+var slider;
 function setup() {
- createCanvas(240, 120);
+ createCanvas(480, 120);
+ slider = createSlider(0, 255, 100);
+ slider.position(20, 20);
 }
 function draw() {
- background(204);
- for (var x = 20; x < width; x += 20) {
- var mx = mouseX / 10;
- var offsetA = random(-mx, mx);
- var offsetB = random(-mx, mx);
- line(x + offsetA, 20, x - offsetB, 100);
- }
+ var gray = slider.value();
+ background(gray);
 }
