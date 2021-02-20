@@ -1,9 +1,15 @@
+var x = 215;
 function setup() {
  createCanvas(480, 120);
- fill(0, 102);
- noStroke();
 }
 function draw() {
- background(204);
- ellipse(mouseX, mouseY, 9, 9);
+if (keyIsPressed) {
+if (keyCode == LEFT_ARROW) {
+x--;
+}
+else if (keyCode == RIGHT_ARROW) {
+x++;
+}
+}
+rect(x, 45, 50, 50);
 }
