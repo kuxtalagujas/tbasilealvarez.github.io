@@ -11,9 +11,9 @@ function setup(){
   sliderx = createSlider(50, 450, 210);
   sliderx.position(300, 520);
   slidery = createSlider(100, 400, 250);
-  slidery.position(300, 540);
+  slidery.position(300, 560);
   sliderang = createSlider(0, 360, 100);
-  sliderang.position(300, 560);
+  sliderang.position(300, 600);
 }
 
 function draw() {
