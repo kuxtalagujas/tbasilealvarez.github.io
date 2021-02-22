@@ -22,12 +22,12 @@ function setup() {
  text(buenos,480,540);
 
  text("Aproximación de Pi (2*N/n): ",280,560);
- text(2*tot/buenos,480,560);
+ text(Math.round(2*tot/buenos,5),480,560);
 
  text("Porcentaje de error: ",280 , 580 );
- text(abs(3.14159265-2*tot/buenos)/3.14159265*100,480,580 )
+ text(abs(3.14159265-2*tot/buenos)/3.14159265*100,485,580 )
 
- text("%", 517,580);
+ text("%", 475,580);
  button1 = createButton("Tirar 1");
  button1.position(20,610 );
  button1.mousePressed(agrega1);
@@ -106,12 +106,12 @@ function Lineas(posx,posy,angu){
     text(buenos,480,540);
 
     text("Aproximación de Pi (2*N/n): ",280,560);
-    text(Math.round(2*tot/buenos,5),480,560);
+    text(2*tot/buenos,480,560);
 
     text("Porcentaje de error: ",280 , 580 );
-    text(Math.round(abs(3.14159265-2*tot/buenos)/3.14159265*100,3),480,580 )
+    text(abs(3.14159265-2*tot/buenos)/3.14159265*100,485,580 )
 
-    text("%", 517,580);
+    text("%", 470,580);
     line(530,0,530,700);
     line(0,700,530,700);
   };
@@ -217,9 +217,9 @@ function resetear(){
   text(2*tot/buenos,480,560);
 
   text("Porcentaje de error: ",280 , 580 );
-  text(abs(3.14159265-2*tot/buenos)/3.14159265*100,480,580 )
+  text(abs(3.14159265-2*tot/buenos)/3.14159265*100,485,580 )
 
-  text("%", 517,580);
+  text("%", 470,580);
   line(530,0,530,700);
   line(0,700,530,700);
 
