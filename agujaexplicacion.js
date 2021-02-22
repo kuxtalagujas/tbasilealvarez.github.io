@@ -107,7 +107,7 @@ function draw() {
   fill(153,0,153);
   text("(h):", 425, 670 );
   strokeWeight(1);
-  text(round(h/100,2),450,670);
+  text(h/100,450,670);
 
   strokeWeight(3);
 
