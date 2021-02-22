@@ -1,117 +1,57 @@
+<!DOCTYPE html>
 <html>
-<head>
-
-	<meta charset="UTF-8">
-	<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro' rel='stylesheet' type='text/css'>
-
-	<script language="javascript" type="text/javascript" src="libraries/p5.js"></script>
-	<!-- uncomment lines below to include extra p5 libraries -->
-	<script language="javascript" src="libraries/p5.dom.js"></script>
-	<!--<script language="javascript" src="libraries/p5.sound.js"></script>-->
-	<script language="javascript" type="text/javascript" src="sketch.js"></script>
-	<!-- this line removes any default padding and style. you might only need one of these values set. -->
-	<style> body {padding: 10;
-		margin: 10;
-			font-family: 'Source Sans Pro', sans-serif;
-	}
-	.codearea{
-background-color: #c4f1ff; /*#ECECEC; */
-padding-left: 20px;
-padding-top: 5px;
-padding-bottom: 5px;
-box-shadow: 3px 3px 4px rgb(60, 60, 80);
-border-radius: 15px;
-margin: 10px;
-}
-
-</style>
-</head>
-
 <body>
-	<h1> Multiple p5.js sketches in separate divs on one HTML page</h1>
-	Let's say you want to have multiple sketches on a single page, how do you do it? P5.js is the answer but the solution is not straight forward. This page explains the process. This is not an intro to <a href ="http://p5js.org/">p5.js</a> or <a href ="http://www.w3schools.com/">HTML</a>. <br>
-	<p>
-	<div id="c1"></div> <br>
-	</p>
-	The first trick is to separate your sketches using <a href ="https://p5js.org/examples/examples/Instance_Mode_Instantiation.php">“instance mode"</a>. This way the sketches can be referenced in different divs, yet still be the same file. Brennan Pilcher added a <a href ="http://faculty.purchase.edu/joseph.mckay/p5jsconverter.html"> instance mode option </a>to the Processing to P5.js page we made, if you want to get a head start. <br>
-	The next trick is to use 'var' to send the sketch to the html (not 'new' as in some examples), and to put the id of the div where you want the canvas to be created inside single 'quotes' after the name of the instance variable like this:  var myp5 = new p5(s, 'divName');
-  <br>
-  <div id="c2"></div> <br>
-	Here's examples of the P5.js and the corresponding HTML. Of course you will also need a libraries folder with the p5.js file in the same directory as these two files. You can get it from the <a href ="http://p5js.org/">p5.js</a> website.
-<h2> The p5.js</h2>
-<div class="codearea">
-<pre>
-// save this file as sketch.js
-// Sketch One
-var s = function( p ) { // p could be any variable name
-  var x = 100;
-  var y = 100;
-  p.setup = function() {
-    p.createCanvas(400, 200);
-  };
 
-  p.draw = function() {
-    p.background(0);
-    p.fill(255);
-    p.rect(x,y,50,50);
-  };
-};
-var myp5 = new p5(s, 'c1');
+<h2>HTML Image</h2>
+<img src="kuxtal.jpg" alt="Kuxtal" width="700" height="333">
 
-// Sketch Two
-var t = function( p ) {
-  var x = 100.0;
-  var y = 100;
-  var speed = 2.5;
-  p.setup = function() {
-    p.createCanvas(400, 200);
-  };
 
-  p.draw = function() {
-    p.background(100);
-    p.fill(1);
-    x += speed;
-    if(x > p.width){
-      x = 0;
-    }
-    p.ellipse(x,y,50,50);
 
-  };
-};
-var myp5 = new p5(t, 'c2');
-</pre>
-</div>
-<iframe src="indexagujaexplicacion.html" width="600" height="800">
+<p><br></p>
+<p><br></p>
+<hr>
+<hr>
+<p><strong><span style="font-size: 36px;">Aguja de Buffon</span></strong></p>
+<p><span style="font-size: 24px;"><strong>Planteamiento:</strong></span></p>
+<hr>
+<p>Lanzar agujas blah blah blah..............</p>
+<p>vemos una simulaci&oacute;n</p>
+<p><br></p>
+<p>**simulacion**</p>
+<iframe src="indexagujas2.html" width="600" height="710">
 </iframe>
-<h2>The html </h2>
-<iframe src="indexagujas2.html" width="600" height="800">
+<p><br></p>
+<p>se ve cool</p>
+<p><br></p>
+<p><span style="font-size: 24px;"><strong>Explicaci&oacute;n:</strong></span></p>
+<hr>
+<p><strong><span style="font-size: 18px;">1. Identificamos sdcsad</span></strong></p>
+<p>dssdscsddsdcascasdcasc</p>
+<p><br></p>
+<p>*simulacion 2*</p>
+<iframe src="indexagujaexplicacion.html" width="600" height="710">
 </iframe>
-<div class="codearea">
-<pre>
-&#x3C;html&#x3E;
-&#x3C;head&#x3E;
-&#x9;&#x3C;meta charset=&#x22;UTF-8&#x22;&#x3E;
-&#x9;&#x3C;script language=&#x22;javascript&#x22; type=&#x22;text/javascript&#x22; src=&#x22;libraries/p5.js&#x22;&#x3E;&#x3C;/script&#x3E;
-&#x9;&#x3C;!-- uncomment lines below to include extra p5 libraries --&#x3E;
-&#x9;&#x3C;!-- &#x9;&#x3C;script language=&#x22;javascript&#x22; src=&#x22;libraries/p5.dom.js&#x22;&#x3E;&#x3C;/script&#x3E; --&#x3E;
-&#x9;&#x3C;!--&#x3C;script language=&#x22;javascript&#x22; src=&#x22;libraries/p5.sound.js&#x22;&#x3E;&#x3C;/script&#x3E;--&#x3E;
-&#x9;&#x3C;script language=&#x22;javascript&#x22; type=&#x22;text/javascript&#x22; src=&#x22;sketch.js&#x22;&#x3E;&#x3C;/script&#x3E;
-&#x9;&#x3C;!-- this line removes any default padding and style. you might only need one of these values set. --&#x3E;
-&#x9;&#x3C;style&#x3E; body {padding: 0;
-&#x9;&#x9;margin: 0;
-&#x9;}
-&#x3C;/style&#x3E;
-&#x3C;/head&#x3E;
-&#x3C;body&#x3E;
-&#x9;&#x3C;div id=&#x22;c1&#x22;&#x3E;&#x3C;/div&#x3E; &#x3C;br&#x3E;
-&#x9;&#x3C;div id=&#x22;c2&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;/body&#x3E;
-&#x3C;/html&#x3E;
-</pre>
-</div>
+<p>dcasdcscsdcs</p>
+<p><br></p>
+<p><br></p>
+<p><strong><span style="font-size: 18px;">2. Simplificamos asdcasdc</span></strong></p>
+<p>scdslkcnsadlcknasdlcknasldcknasldkcn</p>
+<p><br></p>
+<p>*simulacion 3*</p>
+<iframe src="indexagujaexplicacion2.html" width="600" height="410">
+</iframe>
+<p><br></p>
+<p><strong><span style="font-size: 18px;">3. Resolvemos eso&nbsp;</span></strong></p>
+<p>sadkcnasdlkcasldkcnaslkdncasldkncalskdncalskdncalskdncalskdcnlaskdnclaskdnc</p>
+<p><br></p>
+<p>*imagen*</p>
+<p><br></p>
+<p>listo.</p>
+<p><br></p>
+<p><br></p>
+	
+	
+	
 
-Back to <a href ="http://www.joemckaystudio.com/">Joe McKay home page</a>
 </body>
 </html>
-
-
