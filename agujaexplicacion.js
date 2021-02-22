@@ -75,16 +75,16 @@ function draw() {
   line(0,slidery.value(), width , slidery.value());
 
   // h
-  stroke(153,0,153);
-  fill(153,0,153);
-  strokeWeight(1.5);
-  if (slidery.value() < lineacercana){
-    line(esquina2x,esquina2y,esquina2x,slidery.value());
-    h =  abs(slidery.value() - esquina2y);
-  } else{
-    line(esquina1x,esquina1y,esquina1x,slidery.value());
-    h =  abs(slidery.value() - esquina1y);
-  }
+  //stroke(153,0,153);
+  //fill(153,0,153);
+  //strokeWeight(1.5);
+  //if (slidery.value() < lineacercana){
+    //line(esquina2x,esquina2y,esquina2x,slidery.value());
+    //h =  abs(slidery.value() - esquina2y);
+  //} else{
+    //line(esquina1x,esquina1y,esquina1x,slidery.value());
+    //h =  abs(slidery.value() - esquina1y);
+  //}
 
   strokeWeight(0.8);
   stroke(0);
@@ -98,16 +98,16 @@ function draw() {
   text(d/100,410,650);
 
 
-  strokeWeight(0.8);
-  stroke(0);
-  fill(0);
-  text("Altura desde la punta más cercana a un renglón hasta el centro de la aguja",20,670);
-  strokeWeight(1.4)
-  stroke(153,0,153);
-  fill(153,0,153);
-  text("(h):", 425, 670 );
-  strokeWeight(1);
-  text(h/100,450,670);
+  //strokeWeight(0.8);
+  //stroke(0);
+  //fill(0);
+  //text("Altura desde la punta más cercana a un renglón hasta el centro de la aguja",20,670);
+  //strokeWeight(1.4)
+  //stroke(153,0,153);
+  //fill(153,0,153);
+  //text("(h):", 425, 670 );
+  //strokeWeight(1);
+  //text(h/100,450,670);
 
   strokeWeight(3);
 
