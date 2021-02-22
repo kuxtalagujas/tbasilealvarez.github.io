@@ -91,7 +91,7 @@ function draw() {
   fill(153,0,153);
   text("(h): sin(t)/2 = ", 425, 370 );
   strokeWeight(1);
-  text(round(h/100,2),500,370);
+  text(h/100,500,370);
 
 
 
